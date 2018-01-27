@@ -1,0 +1,145 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+* {
+	box-sizing: border-box;
+}
+
+body{
+
+color: #2d2926;
+}
+
+h1, h4{
+	text-transform: uppercase;
+}
+h1{
+	font-size: 3em;
+}
+
+p{
+	font-size: 1.25em;
+}
+
+a {
+	text-decoration: none;
+}
+
+.main-heder{
+	height: 160px;
+	width: 100%;
+	position: relative;
+	top: 0;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 1360px;
+}
+
+#logo{
+display: inline-block;
+padding-top: 1.25em;
+padding-bottom: 1.25em;
+}
+
+.main-footer{
+	background: #002b44;
+	height: 172px;
+	width: 100%;
+}
+
+.main-footer span{
+	float: right;
+	color: #99aab5;
+}
+
+button{
+	border: none;
+	background: #68b2e3;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+/* ---- Navigation ---- */
+
+nav{
+	background: #002b45;
+	height: 60px;
+	width: 100%;
+}
+
+nav a, .footer-nav a {
+	color: #99aab5;
+}
+nav li, .heder-nav li, .footer-nav li{
+	display: inline-block;
+
+	}
+
+.heder-nav{
+	float: right;
+}
+
+.heder-nav a{
+	font-size: .875em;
+	color: #1b5786;
+}
+
+nav ul{
+	margin: 0 auto;
+}
+nav a, .heder-nav a{
+	display: block;
+	text-align: center;
+}
+
+nav a{
+margin: auto 20px;
+}
+
+ul:after {
+    display: block;
+    content: ' ';
+    clear: both;
+    float: none;
+}
+
+nav ul.submenu {
+    display: none;
+    position: absolute;
+    width: 205px;
+    background-color: #1b5786;
+    padding: 0;
+}
+
+nav ul.submenu li {
+    display: block;
+    margin: 0;
+}
+nav ul.submenu li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    margin: 0;
+    text-align: left;
+}
+
+.heder-nav a:hover{
+	color: #002b45;
+	font-size: 1em;
+}
+
+nav a:hover, .footer-nav a:hover{
+	color: #fff;
+}
+
+nav li:hover ul.submenu {
+    display: block;
+}
+
+.selected{
+	color: #fff;
+}
+
