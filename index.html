@@ -10,7 +10,7 @@
   <header class="main-header">
     <div class="container">
       <a href="#" id="logo"><img src="img/logo.png" alt="DFDS"></a>
-      <ul class="heder-nav">
+      <ul class="header-nav">
         <li><a href="#">DFDS.com</a></li>
         <li><a href="#">Ro-Ro freight shipping</a></li>
         <li><a href="#">Logistics services</a></li>
@@ -18,7 +18,7 @@
       </ul>
     </div>
     <nav>
-      <ul>
+      <ul class="container main-nav">
         <li><a href="#">Tata pickup locations</a></li>
         <li><a href="#">Terminal activities</a>
           <ul class="submenu">
@@ -30,7 +30,7 @@
             <li><a href="#">Brevik & Moss</a></li>
           </ul>
         </li>
-        <li><a href="#" class="selected">General safety</a></li>
+        <li><a href="#" id="selected">General safety</a></li>
         <li><a href="#">Report</a></li>
         <li><a href="#">News</a>
           <ul class="submenu">
@@ -52,8 +52,24 @@
         <button>Handbrake alarm</button>
         <button>Loading restraint</button>
       </section>
-      <section>
+      <section class="slideshow-container">
+        <section class="mySlides">
         <img src="img/car.png" alt="car">
+        </section>
+        <section class="mySlides">
+        <img src="img/car1.jpg" alt="car">
+        </section>
+        <section class="mySlides">
+        <img src="img/car2.jpg" alt="car">
+        </section>
+        <section class="mySlides">
+        <img src="img/car3.jpg" alt="car">
+        </section>
+        <section class="mySlides">
+        <img src="img/car4.jpg" alt="car">
+        </section>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </section>
       <section>
         <div>
@@ -97,5 +113,26 @@
     <span>&copy;DFDS 2016</span>
   </footer>
   
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+  </script>
+
 </body>
 </html>

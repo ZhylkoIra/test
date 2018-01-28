@@ -1,17 +1,18 @@
 /* ================================= 
   Base Element Styles
 ==================================== */
+
 * {
 	box-sizing: border-box;
 }
 
 body{
-
-color: #2d2926;
+	color: #2d2926;
 }
 
 h1, h4{
 	text-transform: uppercase;
+	margin: 0;
 }
 h1{
 	font-size: 3em;
@@ -25,23 +26,24 @@ a {
 	text-decoration: none;
 }
 
-.main-heder{
-	height: 160px;
-	width: 100%;
-	position: relative;
-	top: 0;
+button{
+	border: none;
+	background: #68b2e3;
+	text-transform: uppercase;
+	color: #fff;
 }
 
 .container {
 	width: 90%;
 	margin: 0 auto;
-	max-width: 1360px;
+	max-width: 1200px;
 }
 
-#logo{
-display: inline-block;
-padding-top: 1.25em;
-padding-bottom: 1.25em;
+.main-header{
+	height: 160px;
+	width: 100%;
+	position: relative;
+	top: 0;
 }
 
 .main-footer{
@@ -55,12 +57,12 @@ padding-bottom: 1.25em;
 	color: #99aab5;
 }
 
-button{
-	border: none;
-	background: #68b2e3;
-	text-transform: uppercase;
-	color: #fff;
+#logo{
+	display: inline-block;
+	padding-top: 1.25em;
+	padding-bottom: 1.25em;
 }
+
 
 /* ---- Navigation ---- */
 
@@ -70,55 +72,54 @@ nav{
 	width: 100%;
 }
 
-nav a, .footer-nav a {
-	color: #99aab5;
-}
-nav li, .heder-nav li, .footer-nav li{
-	display: inline-block;
-
-	}
-
-.heder-nav{
+.header-nav{
 	float: right;
 }
 
-.heder-nav a{
-	font-size: .875em;
-	color: #1b5786;
+.main-nav {
+	display: flex;
+	align-items: center;
+	padding: 0;
+	min-height: 100%;
 }
 
-nav ul{
-	margin: 0 auto;
+.main-nav li, .header-nav li, .footer-nav li{
+	display: inline-block;
+	}
+
+.main-nav a, .footer-nav a {
+	color: #99aab5;
 }
-nav a, .heder-nav a{
+
+.main-nav a, .header-nav a{
 	display: block;
 	text-align: center;
 }
 
-nav a{
-margin: auto 20px;
+.header-nav a{
+	font-size: .875em;
+	color: #1b5786;
+	margin: auto 0 auto 40px;
 }
 
-ul:after {
-    display: block;
-    content: ' ';
-    clear: both;
-    float: none;
+.main-nav a {
+	margin: auto 40px auto 0;
 }
 
-nav ul.submenu {
+.submenu {
     display: none;
     position: absolute;
     width: 205px;
     background-color: #1b5786;
     padding: 0;
+    margin-top: 1.2em;
 }
 
-nav ul.submenu li {
+.submenu li {
     display: block;
     margin: 0;
 }
-nav ul.submenu li a {
+.submenu li a {
     display: block;
     padding: 10px;
     color: white;
@@ -126,20 +127,75 @@ nav ul.submenu li a {
     text-align: left;
 }
 
-.heder-nav a:hover{
+.header-nav a:hover{
 	color: #002b45;
 	font-size: 1em;
 }
 
-nav a:hover, .footer-nav a:hover{
+.main-nav a:hover, .footer-nav a:hover{
 	color: #fff;
 }
 
-nav li:hover ul.submenu {
+.main-nav li:hover ul.submenu {
     display: block;
 }
 
-.selected{
+#selected{
 	color: #fff;
 }
 
+/* ------- Intro -------- */
+
+.intro{
+	padding-top: 80px;
+}
+
+/* ---- Slide baner ---- */
+
+.mySlides {display: none}
+
+.slideshow-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+  	max-height: 740px;
+  	position: relative;
+  	padding: 80px 0;
+}
+
+.slideshow-container img {
+	vertical-align: middle;
+	max-height: 580px;
+	min-width: 100%;
+	min-height: 100%;
+	flex-shrink: 0;
+}
+
+.prev, .next {
+  	cursor: pointer;
+  	position: absolute;
+  	top: 50%;
+  	width: auto;
+  	padding: 12px 20px;
+  	color: white;
+  	font-weight: lighter;
+  	font-size: 1.125em;
+  	transition: 0.6s ease;
+}
+
+.next {
+  	right: 0;
+  	border-radius: 1px 0 0 1px;
+}
+
+.prev {
+  	left: 0;
+  	border-radius: 0 1px 1px 0;
+}
+
+.prev:hover, .next:hover {
+  	background-color: #5087ac;
+}
+
+/* ---- Slide baner ---- */
