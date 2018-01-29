@@ -7,19 +7,24 @@
 }
 
 body{
+	font-family: 'Lato', Arial, sans-serif;
 	color: #2d2926;
 }
 
-h1, h4{
+h1, h2, h4{
 	text-transform: uppercase;
 	margin: 0;
+	font-weight: bold;
 }
+
 h1{
 	font-size: 3em;
 }
 
 p{
 	font-size: 1.25em;
+	margin: 0;
+	font-weight: 300;
 }
 
 a {
@@ -30,7 +35,9 @@ button{
 	border: none;
 	background: #68b2e3;
 	text-transform: uppercase;
+	font-weight: bold;
 	color: #fff;
+	padding: .875em 1.25em;
 }
 
 .container {
@@ -144,10 +151,22 @@ nav{
 	color: #fff;
 }
 
-/* ------- Intro -------- */
+/* ------- Text desktop-------- */
 
 .intro{
-	padding-top: 80px;
+	padding-top: 5em;
+}
+.intro p{
+	padding: 2.5em 0;
+}
+
+.intro button{
+	margin-right: 10px;
+}
+
+.graybox{
+	background: #eef0f1;
+	padding: 5em 0;
 }
 
 /* ---- Slide baner ---- */
@@ -198,4 +217,40 @@ nav{
   	background-color: #5087ac;
 }
 
-/* ---- Slide baner ---- */
+/* ---- Download list ---- */
+.download{
+padding-bottom: 5em;
+}
+
+.download div {
+	padding: 30px 20px 20px;
+	border: 1px solid #d8dad9;
+}
+
+.download div p {
+	padding: 12px 0 22px;
+	font-size: 1em;
+
+}
+
+.download div span {
+	font-size: 0.75em;
+	font-weight: 300;
+}
+
+.download div:hover {
+	background: #dde3ed;
+	cursor: pointer;
+}
+
+/* ---- Details ---- */
+
+summary {
+  	display: block;
+}
+
+  summary::-webkit-details-marker {
+  	display: none;
+}
+
+/* ---- Video galleru ---- */

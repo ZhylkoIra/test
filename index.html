@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>DFDS</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> 
   </head>
   <body>
   <header class="main-header">
@@ -54,24 +55,27 @@
       </section>
       <section class="slideshow-container">
         <section class="mySlides">
-        <img src="img/car.png" alt="car">
+        <img src="img/truck.png" alt="truck">
         </section>
         <section class="mySlides">
-        <img src="img/car1.jpg" alt="car">
+        <img src="img/road.jpg" alt="road">
         </section>
         <section class="mySlides">
-        <img src="img/car2.jpg" alt="car">
+        <img src="img/sea.jpg" alt="sea">
         </section>
         <section class="mySlides">
-        <img src="img/car3.jpg" alt="car">
+        <img src="img/balloon.jpg" alt="balloon">
         </section>
         <section class="mySlides">
-        <img src="img/car4.jpg" alt="car">
+        <img src="img/barn.jpg" alt="barn">
+        </section>
+        <section class="mySlides">
+        <img src="img/car.jpg" alt="car">
         </section>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </section>
-      <section>
+      <section class="download">
         <div>
           <h4>General safety</h4>
           <p>Instructions PDF download</p>
@@ -84,10 +88,12 @@
         </div>
       </section>
     </div>
-      <section>
-        <h2>General safety video</h2>
-        <p>The Immingham terminal is strategically located on the UK’s East coast with easy access to main motorways and on-site rail connection. DFDS occupies over 700,000m2  of terminal land split into two distinct terminals; Dockside and Riverside..</p>
-        <button>Terminal activities</button>
+      <section class="graybox">
+        <div class="container">
+          <h2>General safety video</h2>
+          <p>The Immingham terminal is strategically located on the UK’s East coast with easy access to main motorways and on-site rail connection. DFDS occupies over 700,000m2  of terminal land split into two distinct terminals; Dockside and Riverside..</p>
+          <button>Terminal activities</button>
+        </div>      
       </section>
     <div class="container">
       <article>
@@ -95,7 +101,14 @@
         <p></p>
       </article>
       <section>
-        
+        <details open="open">
+              <summary>Even more details open</summary>
+              <p>Here are even more details about the details.</p>
+            </details>
+            <details >
+              <summary>Even more details close</summary>
+              <p>Here are even more details about the details.</p>
+          </details>
       </section>
       <section>
         
