@@ -5,6 +5,7 @@
     <title>DFDS</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/font-awesome.min.css"> 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> 
   </head>
   <body>
@@ -21,8 +22,8 @@
     <nav>
       <ul class="container main-nav">
         <li><a href="#">Tata pickup locations</a></li>
-        <li><a href="#">Terminal activities</a>
-          <ul class="submenu">
+        <li><a href="#" class="down">Terminal activities</a>
+          <ul class="submenu ">
             <li><a href="#">Immingham</a></li>
             <li><a href="#">Gothenburg</a></li>
             <li><a href="#">Ghent</a></li>
@@ -33,7 +34,7 @@
         </li>
         <li><a href="#" id="selected">General safety</a></li>
         <li><a href="#">Report</a></li>
-        <li><a href="#">News</a>
+        <li><a href="#" class="down">News</a>
           <ul class="submenu">
             <li><a href="#">DFDS News</a></li>
             <li><a href="#">Alert Bulletins</a></li>
@@ -45,15 +46,14 @@
     </nav>
   </header>
   <main>
-    <div class="container">
-      <section class="intro">
+      <section class=" container2 intro">
         <h1>General safety</h1>
         <p>For information about DFDS' safety management and how participants take part of it, please look through the General Safety Instruction Document, and visit the sub pages.</p>
-        <button>Sub contractor</button>
-        <button>Handbrake alarm</button>
-        <button>Loading restraint</button>
+        <button class="firstbutton">Sub contractor</button>
+        <button class="firstbutton">Handbrake alarm</button>
+        <button class="firstbutton">Loading restraint</button>
       </section>
-      <section class="slideshow-container">
+      <section class=" container2 slideshow-container">
         <section class="mySlides">
         <img src="img/truck.png" alt="truck">
         </section>
@@ -75,7 +75,7 @@
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </section>
-      <section class="download">
+      <section class=" container2 download">
         <div>
           <h4>General safety</h4>
           <p>Instructions PDF download</p>
@@ -90,13 +90,13 @@
     </div>
       <section class="graybox">
         <div class="container">
+
           <h2>General safety video</h2>
           <p>The Immingham terminal is strategically located on the UK’s East coast with easy access to main motorways and on-site rail connection. DFDS occupies over 700,000m2  of terminal land split into two distinct terminals; Dockside and Riverside..</p>
-          <button>Terminal activities</button>
+          <button class="secondbutton">Terminal activities</button>
         </div>      
       </section>
-    <div class="container">
-      <article>
+      <article class="container2">
         <h2>SUB CONTRACTOR INFORMATION</h2>
         <p>DFDS Group is a chosen Logistics partner of TATA Steel. We are responsible for the safe movement of thousands of loads per year across Europe. It is essential that our Haulage partners share our commitment to quality & safety. We have published this handbook as a guide for you & your drivers to use when working on the DFDS- TATA contracts.</p>
         <p>Graham Hall<br>DFDS Logistics</p>
@@ -108,9 +108,9 @@
           <li>Technical Information sheets</li>
           <li>Technical Advice </li>
         </ul>
-        <p>If the driver has any doubts about site rules, he must in the first instance ring his DFDS Logistics Planner for advice or email tata@dfds.com</p>
+        <p>If the driver has any doubts about site rules, he must in the first instance ring his DFDS Logistics Planner for advice or email <a href="mailto:tata@dfds.com"> tata@dfds.com</a></p>
       </article>
-      <article>
+      <article class="container2">
         <h2>HANDBRAKE ALARM</h2>
         <p>Vehicles rolling away are unfortunately an all to common event in the haulage industry. Some events resolve in no injuries, while others end with tragic and fatal consequences. The common issue is the handbrake not applied. One of the best ways to manage, and prevent these events, is to install a handbrake alarm, which effectively prevents the driver from leaving his cab without applying the handbrake.</p>
         <p>Some of the minimum features:</p>
@@ -122,9 +122,8 @@
           <li>Only stop when the handbrake is re-applied</li>
         </ul>
         <p>If the driver has any doubts about site rules, he must in the first instance ring his DFDS Logistics Planner for advice or email tata@dfds.com</p>
-
       </article>
-      <section>
+      <section class="container2">
         <h2>Loading restraint guides & Technical information sheets</h2>
         <p>All information from Tatas substantial safety program.</p>
         <details open="open">
@@ -136,10 +135,11 @@
               <p>Here are even more details about the details.</p>
           </details>
       </section>
-      <section>
-        
+      <section class=" container2">
+        <video controls class="videobar">
+          <source src="video/car.mp4" type="video/mp4">
+        </video>
       </section>
-    </div>
   </main>
   <footer class="main-footer">
     <div class=" container">
@@ -152,6 +152,7 @@
   </footer>
   
   <script>
+
     var slideIndex = 1;
     showSlides(slideIndex);
 
@@ -170,6 +171,7 @@
       slides[slideIndex-1].style.display = "block";  
       dots[slideIndex-1].className += " active";
     }
+
   </script>
 
 </body>

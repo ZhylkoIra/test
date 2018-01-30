@@ -7,8 +7,8 @@
 }
 
 body{
-	font-family: 'Lato', Arial, sans-serif;
-	color: #2d2926;
+	font: 1em/1 'Lato', Arial, sans-serif;
+	color: #2d2926; 
 }
 
 h1, h2, h4{
@@ -21,9 +21,12 @@ h1{
 	font-size: 3em;
 }
 
+h2{
+	font-size: 1.875em;
+}
+
 p{
-	font-size: 1em;
-	margin: 0;
+	margin: .625em 0;
 	font-weight: 300;
 }
 
@@ -31,18 +34,15 @@ a {
 	text-decoration: none;
 }
 
-button{
-	border: none;
-	background: #68b2e3;
-	text-transform: uppercase;
-	font-weight: bold;
-	color: #fff;
-	padding: .875em 1.25em;
-}
-
 .container {
 	width: 90%;
 	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.container2{
+	width: 90%;
+	margin: 5em auto;
 	max-width: 1200px;
 }
 
@@ -103,7 +103,7 @@ nav{
 	display: inline-block;
 	}
 
-.main-nav a, .footer-nav a {
+.main-nav a, .footer-nav a, .submenu li a {
 	color: #99aab5;
 }
 
@@ -118,8 +118,30 @@ nav{
 	margin: auto 0 auto 40px;
 }
 
+.footer-nav a {
+	margin: auto 30px auto 0;
+}
+
+.header-nav a:after, .footer-nav a:after{
+	content:"\f24d";
+	margin-left: 10px;
+	font-family: FontAwesome;
+}
+
 .main-nav a {
 	margin: auto 40px auto 0;
+}
+
+.down:after {
+  	content: "\f107";
+  	margin-left: 10px;
+  	font-family: FontAwesome;
+}
+
+.down:focus:after, .down:active:after {
+  	content: "\f106";
+  	margin-left: 10px;
+  	font-family: FontAwesome;
 }
 
 .submenu {
@@ -138,21 +160,20 @@ nav{
 .submenu li a {
     display: block;
     padding: 10px;
-    color: white;
     margin: 0;
     text-align: left;
 }
 
-.header-nav a:hover{
+.header-nav a:active{
 	color: #002b45;
 	font-size: 1em;
 }
 
-.main-nav a:hover, .footer-nav a:hover{
+.main-nav a:active, .footer-nav a:active, .submenu li a:active{
 	color: #fff;
 }
 
-.main-nav li:hover ul.submenu {
+.main-nav a:focus ~ .submenu, .main-nav a:active ~ .submenu, .submenu:hover {
     display: block;
 }
 
@@ -160,13 +181,45 @@ nav{
 	color: #fff;
 }
 
+/* ------- Button-------- */
+
+button{
+	border: none;
+	background: #68b2e3;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #fff;
+}
+
+button:active {
+	background: #5087ac;
+}
+
+.firstbutton{
+	font-size: 1.25em;
+	padding: .875em 1.25em;
+}
+
+.secondbutton{
+	padding: 1em;
+}
+
+.firstbutton:after{
+	content: "\f105";
+  	margin-left: 5em;
+  	font-family: FontAwesome;
+}
+
+.secondbutton:after{
+	content: "\f105";
+  	margin-left: 1.25em;
+  	font-family: FontAwesome;
+}
+
 /* ------- Text desktop-------- */
 
-.intro{
-	padding-top: 5em;
-}
 .intro p{
-	padding: 2.5em 0;
+	margin: 2.5em 0;
 	font-size: 1.25em;
 }
 
@@ -177,6 +230,7 @@ nav{
 .graybox{
 	background: #eef0f1;
 	padding: 5em 0;
+	margin: 5em 0;
 }
 
 /* ---- Slide baner ---- */
@@ -188,9 +242,8 @@ nav{
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-  	max-height: 740px;
-  	position: relative;
-  	padding: 80px 0;
+  	max-height: 580px;
+  	position: relative;			
 }
 
 .slideshow-container img {
@@ -228,17 +281,23 @@ nav{
 }
 
 /* ---- Download list ---- */
-.download{
-padding-bottom: 5em;
-}
 
 .download div {
 	padding: 30px 20px 20px;
 	border: 1px solid #d8dad9;
+	position: relative;
+}
+
+.download div h4:after{
+	content:"\f063";
+  	font-family: FontAwesome;
+  	color: #43759b;
+  	font-weight: 100;
+  	float: right;
 }
 
 .download div p {
-	padding: 12px 0 22px;
+	margin: 12px 0 22px;
 }
 
 .download div span {
@@ -261,4 +320,14 @@ summary {
   	display: none;
 }
 
-/* ---- Video galleru ---- */
+/* ---- Video gallery ---- */
+
+.videobar{
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+max-width: 370px;
+max-height: 280px;
+}
+
