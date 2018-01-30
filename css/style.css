@@ -7,7 +7,7 @@
 }
 
 body{
-	font: 1em/1 'Lato', Arial, sans-serif;
+	font: 1em/1 'Saira', Arial, sans-serif;
 	color: #2d2926; 
 }
 
@@ -27,7 +27,6 @@ h2{
 
 p{
 	margin: .625em 0;
-	font-weight: 300;
 }
 
 a {
@@ -138,10 +137,15 @@ nav{
   	font-family: FontAwesome;
 }
 
+.down:focus, .down:active {
+  	color: #fff;
+}
+
 .down:focus:after, .down:active:after {
   	content: "\f106";
   	margin-left: 10px;
   	font-family: FontAwesome;
+  	color: #fff;
 }
 
 .submenu {
@@ -187,6 +191,7 @@ button{
 	border: none;
 	background: #68b2e3;
 	text-transform: uppercase;
+	text-align: left;
 	font-weight: bold;
 	color: #fff;
 }
@@ -196,8 +201,9 @@ button:active {
 }
 
 .firstbutton{
-	font-size: 1.25em;
+	width: 260px;
 	padding: .875em 1.25em;
+	margin: 5px 10px 5px 0;
 }
 
 .secondbutton{
@@ -206,7 +212,7 @@ button:active {
 
 .firstbutton:after{
 	content: "\f105";
-  	margin-left: 5em;
+  	float: right;
   	font-family: FontAwesome;
 }
 
@@ -219,12 +225,8 @@ button:active {
 /* ------- Text desktop-------- */
 
 .intro p{
-	margin: 2.5em 0;
+	margin: 2.1875em 0;
 	font-size: 1.25em;
-}
-
-.intro button{
-	margin-right: 10px;
 }
 
 .graybox{
